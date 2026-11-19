@@ -1,0 +1,14 @@
+# PyTorch com CUDA 12.8 --> pacote do índice da PyTorch
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+chess==1.11.2
+matplotlib==3.10.8
+numpy==2.5.1
+onnx==1.21.0
+onnxconverter-common==1.16.0
+onnxruntime-gpu==1.28.0
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1
+seaborn==0.13.2
+tqdm==4.67.3

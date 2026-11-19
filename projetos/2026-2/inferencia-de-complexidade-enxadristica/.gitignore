@@ -1,0 +1,7 @@
+*.pt
+*.zst
+*.pdb
+*.onnx
+*.csv
+!data/*.csv
+!data/partidas/*.csv
