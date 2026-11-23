@@ -1,340 +1,309 @@
-Via Licitações
+<h1> Via Licitações </h1>
 
-Sistema Web de Inteligência em Licitações Públicas com Automação RPA
+<p align="center">
+<strong>Sistema Web de Inteligência em Licitações Públicas com Automação RPA</strong>
+</p>
 
-Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) do curso de Engenharia de Computação da Pontifícia Universidade Católica do Paraná (PUCPR).
+<p align="center">
+<img src="https://img.shields.io/badge/PHP-Backend-777BB4?style=flat-square&logo=php&logoColor=white">
+<img src="https://img.shields.io/badge/Python-RPA-3776AB?style=flat-square&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=flat-square&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/PUCPR-TCC-orange?style=flat-square">
+</p>
 
-1. Sobre o projeto
+<h2>01. Sobre o projeto</h2>
 
-O Via Licitações é uma solução computacional desenvolvida para apoiar empresas no acompanhamento, identificação e gerenciamento de oportunidades em processos de compras e contratações públicas.
+<p>
+O <strong>Via Licitações</strong> é uma plataforma de inteligência em licitações públicas desenvolvida para auxiliar empresas na identificação, consulta e gestão de oportunidades em processos de compras e contratações públicas.
+</p>
 
-A plataforma integra um sistema web de gestão com uma automação RPA (Robotic Process Automation), responsável pela coleta e processamento de informações de licitações públicas.
+<p>
+A solução integra um sistema web desenvolvido em PHP, um banco de dados MySQL e uma automação RPA desenvolvida em Python, responsável pela coleta e processamento de informações de licitações.
+</p>
 
-O sistema busca centralizar informações de processos licitatórios, permitindo que empresas acompanhem oportunidades relacionadas às suas atividades econômicas, regiões de interesse e palavras-chave cadastradas.
+<h2>02. Funcionalidades</h2>
 
-2. Objetivos
-Automatizar a coleta de informações de licitações públicas.
-Centralizar os dados coletados em um banco de dados relacional.
-Disponibilizar uma interface web para consulta e gerenciamento de oportunidades.
-Permitir o cadastro e gerenciamento de empresas e usuários.
-Oferecer filtros por CNAE, palavras-chave e regiões geográficas.
-Permitir o acompanhamento de licitações de interesse.
-Disponibilizar ferramentas de organização comercial, comentários e tarefas.
-Registrar operações, importações e execuções da automação.
-3. Arquitetura da solução
+<table>
+<tr>
+<td width="50%">
+<strong>Gestão de usuários</strong><br>
+Autenticação, cadastro e gerenciamento de usuários e equipes.
+</td>
+<td width="50%">
+<strong>Gestão de empresas</strong><br>
+Cadastro de empresas e atividades econômicas.
+</td>
+</tr>
+<tr>
+<td>
+<strong>Consulta de licitações</strong><br>
+Pesquisa e filtragem por palavras-chave e regiões.
+</td>
+<td>
+<strong>Gestão de oportunidades</strong><br>
+Acompanhamento de licitações, comentários e tarefas.
+</td>
+</tr>
+<tr>
+<td>
+<strong>Automação RPA</strong><br>
+Coleta e processamento automatizado de informações.
+</td>
+<td>
+<strong>Administração</strong><br>
+Notificações, importações, logs e gerenciamento de dados.
+</td>
+</tr>
+</table>
 
-A solução é dividida em dois componentes principais:
+<h2>03. Arquitetura tecnológica</h2>
 
-3.1 Sistema Web
+<h3>Sistema Web</h3>
 
-Desenvolvido utilizando:
+<table>
+<tr><th>Tecnologia</th><th>Aplicação</th></tr>
+<tr><td>PHP</td><td>Backend</td></tr>
+<tr><td>HTML5</td><td>Estrutura das interfaces</td></tr>
+<tr><td>CSS3</td><td>Estilização</td></tr>
+<tr><td>JavaScript</td><td>Interatividade</td></tr>
+<tr><td>MySQL</td><td>Banco de dados</td></tr>
+<tr><td>PDO</td><td>Comunicação com o banco</td></tr>
+<tr><td>XAMPP</td><td>Ambiente local de execução</td></tr>
+</table>
 
-PHP.
-HTML5.
-CSS3.
-JavaScript.
-MySQL.
-PDO para comunicação com o banco de dados.
+<h3>Automação RPA</h3>
 
-O sistema é executado localmente por meio do servidor Apache disponibilizado pelo XAMPP.
+<table>
+<tr><th>Tecnologia</th><th>Aplicação</th></tr>
+<tr><td>Python</td><td>Desenvolvimento da automação</td></tr>
+<tr><td>Pandas</td><td>Manipulação de dados</td></tr>
+<tr><td>BeautifulSoup</td><td>Análise de HTML</td></tr>
+<tr><td>Selenium</td><td>Automação web</td></tr>
+<tr><td>WebDriver Manager</td><td>Gerenciamento do ChromeDriver</td></tr>
+</table>
 
-Principais funcionalidades:
+<h3>Banco de dados</h3>
 
-Autenticação e gerenciamento de usuários.
-Painel administrativo.
-Cadastro e gerenciamento de empresas.
-Gerenciamento de equipes.
-Consulta de licitações.
-Filtros por CNAE, palavras-chave e regiões.
-Gerenciamento de interesses em licitações.
-Comentários e acompanhamento de oportunidades.
-Gerenciamento de tarefas.
-Notificações.
-Registro de logs.
-Importação e gerenciamento de dados.
-3.2 Automação RPA
+<p><strong>Banco:</strong> <code>via_licitacoes</code></p>
+<p><strong>SGBD:</strong> MySQL</p>
+<p><strong>Estrutura:</strong> 16 tabelas relacionais.</p>
 
-Desenvolvida em Python, utilizando:
+<table>
+<tr><th>Domínio</th><th>Tabelas</th></tr>
+<tr><td>Empresas e CNAEs</td><td>empresas, cnaes_catalogo, cnaes_interesse</td></tr>
+<tr><td>Licitações</td><td>licitacoes, documentos_licitacao, fontes_coleta</td></tr>
+<tr><td>Oportunidades</td><td>interesses_licitacoes, interesses_comentarios, interesses_tarefas</td></tr>
+<tr><td>Inteligência comercial</td><td>leads</td></tr>
+<tr><td>Preferências</td><td>palavras_interesse, regioes_interesse</td></tr>
+<tr><td>Usuários e comunicação</td><td>usuarios, notificacoes</td></tr>
+<tr><td>Auditoria</td><td>logs_execucao, importacoes</td></tr>
+</table>
 
-Pandas: manipulação e processamento de dados.
-BeautifulSoup: análise de conteúdo HTML.
-Selenium: automação de navegação web.
-WebDriver Manager: gerenciamento do ChromeDriver.
+<h2>04. Estrutura do repositório</h2>
 
-A automação é responsável pelo processo de coleta e processamento de informações de editais e licitações públicas, integrando os resultados ao ecossistema do Via Licitações.
-
-3.3 Banco de dados
-
-O sistema utiliza MySQL, com banco de dados denominado via_licitacoes.
-
-O modelo de dados contempla 16 tabelas, organizadas nos seguintes domínios:
-
-Domínio	Tabelas
-Empresas e CNAEs	empresas, cnaes_catalogo, cnaes_interesse
-Licitações	licitacoes, documentos_licitacao, fontes_coleta
-Gestão de oportunidades	interesses_licitacoes, interesses_comentarios, interesses_tarefas
-Inteligência comercial	leads
-Preferências	palavras_interesse, regioes_interesse
-Usuários e comunicação	usuarios, notificacoes
-Auditoria e processamento	logs_execucao, importacoes
-
-O relacionamento entre as entidades permite associar empresas, usuários, licitações e oportunidades comerciais, mantendo o histórico das operações realizadas.
-
-4. Estrutura do projeto
-text
+<pre>
 via-licitacoes/
 │
 ├── data/
-│   ├── datasets/
-│   └── exemplos/
-│       └── via_licitacoes.sql
+│ ├── datasets/
+│ └── exemplos/
+│ └── via_licitacoes.sql
 │
 ├── src/
-│   ├── sistema/
-│   │   ├── public/
-│   │   │   ├── admin/
-│   │   │   ├── api/
-│   │   │   ├── app/
-│   │   │   └── assets/
-│   │   │       ├── css/
-│   │   │       ├── img/
-│   │   │       └── js/
-│   │   │
-│   │   ├── src/
-│   │   │   ├── config/
-│   │   │   ├── core/
-│   │   │   ├── helpers/
-│   │   │   └── models/
-│   │   │
-│   │   ├── .htaccess
-│   │   └── README.md
-│   │
-│   └── automacao/
-│       ├── main.py
-│       ├── automacao.bat
-│       └── requirements.txt
+│ ├── sistema/
+│ │ ├── public/
+│ │ │ ├── admin/
+│ │ │ ├── api/
+│ │ │ ├── app/
+│ │ │ └── assets/
+│ │ │ ├── css/
+│ │ │ ├── img/
+│ │ │ └── js/
+│ │ │
+│ │ ├── src/
+│ │ │ ├── config/
+│ │ │ ├── core/
+│ │ │ ├── helpers/
+│ │ │ └── models/
+│ │ │
+│ │ ├── .htaccess
+│ │ └── README.md
+│ │
+│ └── automacao/
+│ ├── main.py
+│ ├── automacao.bat
+│ └── requirements.txt
 │
 ├── tests/
-│   ├── integracao/
-│   └── unitarios/
+│ ├── integracao/
+│ └── unitarios/
 │
 └── README.md
+</pre>
 
-5. Requisitos para execução
-Sistema Web
-Windows ou sistema operacional compatível.
-XAMPP.
-Apache.
-PHP com suporte a PDO MySQL.
-MySQL ou MariaDB.
-Navegador web moderno.
-Automação RPA
-Python 3.
-Google Chrome.
-Dependências Python descritas em src/automacao/requirements.txt.
-Conexão com a internet para as operações de coleta.
-6. Instalação e configuração
-6.1 Preparação do ambiente
+<h2>05. Requisitos</h2>
 
-Instale o XAMPP e inicie os serviços:
+<table>
+<tr><th>Sistema Web</th><th>Automação RPA</th></tr>
+<tr>
+<td>
+<ul>
+<li>Windows ou compatível</li>
+<li>XAMPP</li>
+<li>Apache</li>
+<li>PHP com PDO MySQL</li>
+<li>MySQL ou MariaDB</li>
+<li>Navegador moderno</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Python 3</li>
+<li>Google Chrome</li>
+<li>requirements.txt</li>
+<li>Conexão com a internet</li>
+</ul>
+</td>
+</tr>
+</table>
 
-Apache.
-MySQL.
-6.2 Instalação do sistema web
+<h2>06. Instalação do sistema web</h2>
 
-Copie o conteúdo da pasta src/sistema/ para:
+<h3>1. Preparar o ambiente</h3>
 
-text
-C:\xampp\htdocs\via-licitacoes
+<p>Instale o <a href="https://www.apachefriends.org/">XAMPP</a> e inicie Apache e MySQL.</p>
 
+<h3>2. Configurar os arquivos</h3>
 
-A estrutura esperada será:
+<p>Copie o conteúdo de <code>src/sistema/</code> para:</p>
 
-text
-C:\xampp\htdocs\via-licitacoes\
-├── public/
-├── src/
-├── .htaccess
-└── README.md
+<pre>C:\xampp\htdocs\via-licitacoes</pre>
 
-6.3 Criação do banco de dados
-Acesse o phpMyAdmin:
+<h3>3. Criar o banco de dados</h3>
 
-http://localhost/phpmyadmin
+<p>Acesse o phpMyAdmin:</p>
 
-Crie um banco de dados chamado:
+<p><a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a></p>
 
-via_licitacoes
+<ol>
+<li>Crie o banco <code>via_licitacoes</code>.</li>
+<li>Selecione o banco criado.</li>
+<li>Acesse a opção Importar.</li>
+<li>Selecione <code>data/exemplos/via_licitacoes.sql</code>.</li>
+<li>Execute a importação.</li>
+</ol>
 
-Selecione o banco criado.
-Acesse a opção Importar.
-Selecione o arquivo:
+<h3>4. Configurar a conexão</h3>
 
-data/exemplos/via_licitacoes.sql
+<p>Arquivo: <code>src/config/database.php</code></p>
 
-Execute a importação.
+<p>Configure host, banco de dados, usuário, senha e charset conforme o ambiente.</p>
 
-O arquivo SQL disponibilizado contém a estrutura do banco e os dados de demonstração que forem mantidos na versão publicada.
+<h3>5. Configurar a aplicação</h3>
 
-6.4 Configuração da conexão
+<p>Arquivo: <code>src/config/config.php</code></p>
 
-A conexão com o banco de dados está definida em:
+<p>Verifique ambiente, depuração, URL base, caminhos físicos e fuso horário.</p>
 
-text
-src/config/database.php
+<h3>6. Executar o sistema</h3>
 
+<p>Acesse:</p>
 
-Verifique as seguintes configurações conforme o ambiente:
+<p><a href="http://localhost/via-licitacoes/public">http://localhost/via-licitacoes/public</a></p>
 
-Host do MySQL.
-Nome do banco.
-Usuário.
-Senha.
-Charset.
+<p>Utilize uma conta previamente configurada no banco de dados. O repositório não disponibiliza credenciais administrativas.</p>
 
-A configuração local padrão do projeto utiliza MySQL em localhost, banco via_licitacoes e conexão PDO.
+<h2>07. Instalação da automação RPA</h2>
 
-Ajuste as credenciais conforme a instalação do XAMPP utilizada.
+<p>Abra o PowerShell na pasta da automação:</p>
 
-6.5 Configuração da aplicação
+<pre>cd C:\PUCPR-TCC\TCC-Engenharia-de-Computacao\projetos\2026-2\via-licitacoes\src\automacao</pre>
 
-O arquivo de configurações globais está localizado em:
+<p><strong>Criação do ambiente virtual:</strong></p>
 
-text
-src/config/config.php
+<pre>python -m venv .venv</pre>
 
+<p><strong>Ativação:</strong></p>
 
-Entre os parâmetros configuráveis estão:
+<pre>.\.venv\Scripts\Activate.ps1</pre>
 
-Ambiente de execução.
-Depuração.
-URL base.
-Caminhos físicos.
-Fuso horário.
+<p><strong>Instalação das dependências:</strong></p>
 
-A URL base deve corresponder ao endereço em que a aplicação estiver instalada.
+<pre>pip install -r requirements.txt</pre>
 
-6.6 Acesso ao sistema
+<p><strong>Execução:</strong></p>
 
-Após iniciar Apache e MySQL, acesse:
+<pre>python main.py</pre>
 
-http://localhost/via-licitacoes/public
+<p>Também está disponível o arquivo <code>automacao.bat</code> para inicialização em ambiente Windows.</p>
 
-O acesso administrativo deve ser realizado com uma conta configurada no banco de dados. Não são disponibilizadas credenciais administrativas no repositório.
+<h2>08. Integração dos componentes</h2>
 
-7. Instalação da automação RPA
-
-A automação está localizada em:
-
-text
-src/automacao/
-
-
-Recomenda-se utilizar um ambiente virtual Python.
-
-Abra o PowerShell na pasta da automação:
-
-powershell
-cd C:\PUCPR-TCC\TCC-Engenharia-de-Computacao\projetos\2026-2\via-licitacoes\src\automacao
-
-
-Crie o ambiente virtual:
-
-powershell
-python -m venv .venv
-
-
-Ative o ambiente:
-
-powershell
-.\.venv\Scripts\Activate.ps1
-
-
-Instale as dependências:
-
-powershell
-pip install -r requirements.txt
-
-
-Execute a automação conforme os parâmetros implementados no script:
-
-powershell
-python main.py
-
-
-Também está disponível o arquivo automacao.bat, destinado à inicialização da automação em ambiente Windows.
-
-8. Integração entre os componentes
-
-A solução integra o sistema web, o banco de dados MySQL e a automação Python.
-
-O fluxo geral de funcionamento contempla:
-
-Coleta de informações de licitações públicas.
-Processamento e organização dos dados.
-Integração das informações com o sistema.
-Armazenamento dos registros no banco de dados.
-Disponibilização das informações na interface web.
-Gerenciamento das oportunidades identificadas pelos usuários.
-
-A comunicação entre os componentes utiliza mecanismos de integração definidos na implementação do sistema.
-
-9. Segurança
-
-O projeto contempla mecanismos de autenticação, controle de acesso e comunicação entre componentes.
-
-Para instalação e execução:
-
-Não versionar senhas, tokens ou credenciais.
-Não disponibilizar dados pessoais ou comerciais sem autorização.
-Utilizar configurações externas para informações sensíveis.
-Não utilizar contas administrativas de demonstração em ambientes de produção.
-Desabilitar a exibição de erros em ambientes de produção.
-Restringir o acesso aos diretórios internos e arquivos de configuração.
-10. Testes e validação
-
-Os diretórios destinados aos testes são:
-
-text
+<p>O funcionamento da solução contempla o seguinte fluxo:</p>
+
+<p align="center">
+<strong>Automação Python</strong><br>
+↓<br>
+Coleta e processamento de licitações<br>
+↓<br>
+<strong>Banco de dados MySQL</strong><br>
+↓<br>
+<strong>Sistema Web PHP</strong><br>
+↓<br>
+Consulta e gerenciamento de oportunidades
+</p>
+
+<p>A comunicação entre os componentes utiliza os mecanismos de integração definidos na implementação do sistema.</p>
+
+<h2>09. Segurança</h2>
+
+<ul>
+<li>Não versionar senhas, tokens ou credenciais.</li>
+<li>Proteger dados pessoais e comerciais.</li>
+<li>Utilizar configurações externas para informações sensíveis.</li>
+<li>Não utilizar contas de demonstração em produção.</li>
+<li>Desabilitar a exibição de erros em produção.</li>
+<li>Restringir o acesso a diretórios internos e arquivos de configuração.</li>
+</ul>
+
+<h2>10. Testes</h2>
+
+<pre>
 tests/
 ├── integracao/
 └── unitarios/
+</pre>
 
+<ul>
+<li><strong>Unitários:</strong> validação de funcionalidades isoladas.</li>
+<li><strong>Integração:</strong> verificação da comunicação entre sistema web, banco de dados e automação.</li>
+</ul>
 
-Os testes unitários são destinados à validação de funcionalidades isoladas.
+<h2>11. Organização acadêmica</h2>
 
-Os testes de integração são destinados à verificação da comunicação entre os componentes da solução, incluindo sistema web, banco de dados e automação.
+<table>
+<tr><td><strong>Projeto</strong></td><td>Via Licitações</td></tr>
+<tr><td><strong>Curso</strong></td><td>Engenharia de Computação</td></tr>
+<tr><td><strong>Instituição</strong></td><td>Pontifícia Universidade Católica do Paraná (PUCPR)</td></tr>
+<tr><td><strong>Disciplina</strong></td><td>Projeto Final de Curso – IOPT</td></tr>
+<tr><td><strong>Etapa</strong></td><td>4º Bimestre – Implementação Final</td></tr>
+<tr><td><strong>Período</strong></td><td>2026/2</td></tr>
+<tr><td><strong>Versão sugerida</strong></td><td>v1.0.0-final</td></tr>
+</table>
 
-11. Tecnologias utilizadas
-Tecnologia	Aplicação
-PHP	Backend do sistema
-HTML5	Estrutura das interfaces
-CSS3	Estilização
-JavaScript	Interatividade
-MySQL	Banco de dados relacional
-Python	Automação RPA
-Pandas	Processamento de dados
-BeautifulSoup	Análise de HTML
-Selenium	Automação web
-WebDriver Manager	Gerenciamento do driver
-XAMPP	Ambiente local de execução
-Git e GitHub	Versionamento do código
-12. Organização acadêmica
+<p>A documentação acadêmica formal, relatórios, apresentações e materiais de defesa devem ser submetidos pelo ambiente institucional Canvas, conforme as orientações da coordenação.</p>
 
-Projeto desenvolvido no âmbito do Trabalho de Conclusão de Curso de Engenharia de Computação da Pontifícia Universidade Católica do Paraná (PUCPR).
+<p>Este repositório destina-se ao versionamento e compartilhamento dos códigos-fonte e materiais técnicos necessários à execução do software.</p>
 
-Disciplina: Projeto Final de Curso – IOPT
-Etapa: 4º Bimestre – Implementação Final
-Marco de versionamento sugerido: v1.0.0-final
+<h2>12. Licença</h2>
 
-A documentação acadêmica formal, relatórios, apresentações e demais materiais de defesa devem ser submetidos exclusivamente pelo ambiente institucional Canvas, conforme as orientações da coordenação.
+<p>Consulte o arquivo <code>LICENSE</code> na raiz do repositório para conhecer os termos de utilização e distribuição aplicáveis ao projeto.</p>
 
-Este repositório destina-se ao versionamento e compartilhamento dos códigos-fonte, arquivos técnicos e materiais necessários à execução do software.
-
-13. Licença e utilização
-
-Consulte o arquivo LICENSE na raiz do repositório institucional para conhecer os termos de utilização e distribuição aplicáveis ao projeto.
-
-Via Licitações — Trabalho de Conclusão de Curso
-Engenharia de Computação | PUCPR
-Implementação Final — 2026/2
+<p align="center">
+<strong>VIA LICITAÇÕES</strong><br>
+Sistema de Inteligência em Licitações Públicas<br><br>
+Trabalho de Conclusão de Curso<br>
+Engenharia de Computação — PUCPR<br>
+2026/2
+</p>
